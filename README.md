@@ -6,7 +6,10 @@
 <li>The Cyber Kill Chain</li>
 <li>Snort Analysis</li>
 <li>Drop Zones</li>
-<li>Configuring Firewalls</li>
+<li>Firewalls Configuration</li>
 <li>Intrustion Prevention Systems</li>
 <li>Defense in Depth</li>
 <li>Firewall Architectures and Methodologies</li>
+<br>
+<h2>Environments Used</h2>
+<li>Windows Virtual Machine</li>
