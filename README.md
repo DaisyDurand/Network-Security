@@ -13,4 +13,4 @@
 <br>
 <h2>Environments Used</h2>
 <li>Windows Virtual Machine</li>
-![UFW](![UFW](https://github.com/DaisyDurand/Network-Security/assets/147094227/b2b0255d-d78f-4bcf-8f7f-671a7cbe48e9)
+![UFW](https://imgur.com/a/gLJxGv5)
