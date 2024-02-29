@@ -1,8 +1,8 @@
 # Network-Security
 ## Description
 This challenge requires knowledge of:
-* Drop Zones
-* Firewalls Configuration
+* Security zones
+* Firewall Configuration
 ## Environments Used
 * Ubuntu
 ## Drop Zone Lab
