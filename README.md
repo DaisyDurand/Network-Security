@@ -71,15 +71,15 @@ This challenge requires knowledge of:
 >
 > ![add service to public HTTP](https://github.com/DaisyDurand/Network-Security/assets/147094227/36bcd480-cb65-4e4e-b4fb-1953f3892f75)
 > 
-> sudo firewall-cmd --permanent --zone=public --add-service=HTTPS
+> $sudo firewall-cmd --permanent --zone=public --add-service=HTTPS
 >
 > ![add service to public HTTPS](https://github.com/DaisyDurand/Network-Security/assets/147094227/25d63057-b6c4-43c8-8e9d-865db9806cba)
 > 
-> sudo firewall-cmd --permanent --zone=public --add-service=POP3
+> $sudo firewall-cmd --permanent --zone=public --add-service=POP3
 >
 > ![add service tp public POP3](https://github.com/DaisyDurand/Network-Security/assets/147094227/42035cb2-ee4e-471c-b763-7b0e44e52a54)
 > 
-> sudo firewall-cmd --permanent --zone=public --add-service=SMTP
+> $sudo firewall-cmd --permanent --zone=public --add-service=SMTP
 >
 > ![add service to publid SMTP](https://github.com/DaisyDurand/Network-Security/assets/147094227/beac4f81-ece5-4795-b2fa-711f4124afe3)
 >
@@ -88,3 +88,76 @@ This challenge requires knowledge of:
 > $sudo firewall-cmd --permanent --zone=web --add-service=HTTP
 > 
 > ![add service to web HTTP](https://github.com/DaisyDurand/Network-Security/assets/147094227/aa7f250f-d026-49db-a1b6-85229b719bfd)
+>
+> Sales zone
+> 
+> $sudo firewall-cmd --permanent --zone=sales --add-service=HTTPS
+>
+> ![add service to sales HTTPS](https://github.com/DaisyDurand/Network-Security/assets/147094227/989bf080-7557-4d5e-8faa-0bcb77f5bb99)
+>
+> Mail zone
+>
+> $sudo firewall-cmd --permanent --zone=mail --add-service=SMTP
+> $sudo firewall-cmd --permanent --zone=mail --add-service=POP3
+>
+> ![add service to mail SMTP and POP3](https://github.com/DaisyDurand/Network-Security/assets/147094227/d36e23e3-0c89-4e1d-8e35-84a8e219343f)
+
+10. Add adversaries to the drop zone
+>
+> $sudo firewall-cmd --permanent --zone=drop --add-rich-rule=”rule family=’ipv4’ source address=’10.208.56.23’ reject”
+>
+>![Drop rule 1](https://github.com/DaisyDurand/Network-Security/assets/147094227/dc77c50c-fd57-4411-9ccc-1ffd16d9bcb2)
+>
+> $sudo firewall-cmd --permanent --zone=drop --add-rich-rule=”rule family=’ipv4’ source address=’135.95.103.76’ reject”
+>
+>![Drop rule 2](https://github.com/DaisyDurand/Network-Security/assets/147094227/0defe234-eec2-4e6c-934e-3e0b6254279a)
+>
+> $sudo firewall-cmd --permanent --zone=drop --add-rich-rule=”rule family=’ipv4’ source address=’76.34.169.118’ reject”
+>
+>![Drop rule 3](https://github.com/DaisyDurand/Network-Security/assets/147094227/3e903afb-eddf-4bef-b097-aa85fcb00230)
+
+11. Make rules permanent, then reload them
+>
+> $sudo firewall-cmd --reload
+>
+>![Make rules permanent](https://github.com/DaisyDurand/Network-Security/assets/147094227/7f4ebba8-ef77-4ea0-bd44-c435eb92fa78)
+
+12. View active zones
+>
+> $sudo firewall-cmd --get-zones
+>
+>![View active zones](https://github.com/DaisyDurand/Network-Security/assets/147094227/86362dd5-e3f5-4dfb-a2c2-2670b69eecca)
+
+13. Block an IP address
+>
+> $sudo firewall-cmd --permanent --zone=public --add-rich-rule=”rule family=’ipv4’ source address=’138.138.0.3’ reject”
+>
+>![Block an IP address](https://github.com/DaisyDurand/Network-Security/assets/147094227/292d70bd-5ea4-4a84-8b06-7cda66da210c)
+
+14. Block ping/ICMP requests
+>
+> $sudo firewall-cmd --permanent --zone=public --add-icmp-block=echo-request
+>
+>![Block ping](https://github.com/DaisyDurand/Network-Security/assets/147094227/230a4c7d-9612-4bf5-9a3c-46bff4127c8f)
+
+15. Rule check
+>
+> $sudo firewall-cmd --zone=web --list-all
+>
+>![List web](https://github.com/DaisyDurand/Network-Security/assets/147094227/e486c721-78ac-4c93-8938-36b2586a68e5)
+>
+>  $sudo firewall-cmd --zone=mail --list-all
+>
+>![List mail](https://github.com/DaisyDurand/Network-Security/assets/147094227/ad13a005-0683-40a7-809a-dc03eb3286a4)
+>
+> $sudo firewall-cmd --zone=sales --list-all
+>
+>![List sales](https://github.com/DaisyDurand/Network-Security/assets/147094227/40348c2c-093d-44d3-bee6-402fc45bb313)
+>
+> $sudo firewall-cmd --zone=drop --list-all
+>
+>![List drop](https://github.com/DaisyDurand/Network-Security/assets/147094227/7ab3e84f-5445-42af-8cec-57134b045e91)
+>
+> $sudo firewall-cmd --zone=public --list-all
+>
+>![List public](https://github.com/DaisyDurand/Network-Security/assets/147094227/9089c362-2644-40c7-b8d8-de447fcad10d)
