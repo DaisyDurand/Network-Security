@@ -30,7 +30,7 @@ This challenge requires knowledge of:
 6. Zone views
 > $sudo firewall-cmd --list-all-zones
 >
-> The zones in the images below were previously configured.
+> **Note**: The zones in the images below were previously configured.
 > 
 > ![Zone views](https://github.com/DaisyDurand/Network-Security/assets/147094227/28455b81-1789-4e22-97f9-2ae74349a702)
 >
