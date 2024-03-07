@@ -1,4 +1,4 @@
-# Network-Security
+# NetSec Firewall Implementation Project
 ## Description
 The project requires expertise in various aspects of cybersecurity, including understanding security control types, intrusion detection, attack indicators, and the cyber kill chain methodology. Additionally, proficiency with firewall management tools like ufw and firewalld is essential. Knowledge of firewall architectures and methodologies for protecting networks and systems against cyber threats is also crucial. Overall, the project involves implementing comprehensive security measures to safeguard against potential attacks and ensure the resilience of the network.
 
